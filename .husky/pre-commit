@@ -1,0 +1,2 @@
+npx lint-staged &&
+sh scripts/check-plugin-version-bump.sh

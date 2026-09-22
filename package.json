@@ -1,0 +1,45 @@
+{
+  "name": "chat-skills",
+  "version": "0.3.0",
+  "private": true,
+  "description": "Portable agent skills that surface unstated assumptions before they derail the work. Runs natively in Claude and ChatGPT.",
+  "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "Leon Claus",
+    "url": "https://leonclaus.com"
+  },
+  "homepage": "https://github.com/leonclaus/chat-skills#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonclaus/chat-skills.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leonclaus/chat-skills/issues"
+  },
+  "keywords": [
+    "agent-skills",
+    "skills",
+    "claude",
+    "chatgpt",
+    "productivity"
+  ],
+  "scripts": {
+    "lint": "npm run lint:md && npm run lint:format",
+    "lint:md": "markdownlint-cli2 \"**/*.md\" \"!node_modules\"",
+    "lint:format": "prettier --check \"**/*.{json,yml,yaml}\"",
+    "format": "prettier --write \"**/*.{json,yml,yaml}\" && markdownlint-cli2 --fix \"**/*.md\" \"!node_modules\"",
+    "check:version": "sh scripts/check-plugin-version-bump.sh",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.md": "markdownlint-cli2 --fix",
+    "*.{json,yml,yaml}": "prettier --write"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.8",
+    "markdownlint-cli2": "^0.22.1",
+    "prettier": "^3.9.4"
+  }
+}

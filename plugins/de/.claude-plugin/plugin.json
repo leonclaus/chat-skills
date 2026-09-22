@@ -1,0 +1,24 @@
+{
+  "name": "leonclaus-skills-de",
+  "version": "0.3.0",
+  "description": "Drei Skills, die unausgesprochene Annahmen sichtbar machen, bevor sie die Arbeit entgleisen lassen — frag-nach, schritt-fuer-schritt und von-vorne. Deutschsprachige Ausgabe, läuft nativ in Claude und ChatGPT.",
+  "author": {
+    "name": "Leon Claus",
+    "url": "https://leonclaus.com"
+  },
+  "homepage": "https://leonclaus.com",
+  "repository": "https://github.com/leonclaus/chat-skills",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "skills",
+    "claude",
+    "chatgpt",
+    "deutsch",
+    "german",
+    "produktivitaet",
+    "workflow",
+    "abstimmen",
+    "schritt-fuer-schritt"
+  ]
+}

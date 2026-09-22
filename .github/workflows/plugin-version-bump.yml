@@ -1,0 +1,14 @@
+name: Plugin Version Bump
+
+on:
+  pull_request:
+
+jobs:
+  version-bump:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Ensure a changed plugin surface bumps the version
+        run: sh scripts/check-plugin-version-bump.sh "origin/${{ github.base_ref }}"

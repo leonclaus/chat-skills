@@ -1,0 +1,44 @@
+{
+  "name": "leonclaus",
+  "owner": {
+    "name": "Leon Claus",
+    "url": "https://leonclaus.com"
+  },
+  "description": "Portable agent skills for deliberate work with AI. Install once in Claude or ChatGPT — in English or German.",
+  "plugins": [
+    {
+      "name": "leonclaus-skills",
+      "source": "./plugins/en",
+      "description": "Three skills that surface unstated assumptions before they derail the work — ask-me, step-by-step and fresh-start. Runs natively in Claude and ChatGPT.",
+      "category": "productivity",
+      "keywords": [
+        "agent-skills",
+        "skills",
+        "claude",
+        "chatgpt",
+        "productivity",
+        "workflow",
+        "clarify",
+        "step-by-step"
+      ]
+    },
+    {
+      "name": "leonclaus-skills-de",
+      "source": "./plugins/de",
+      "description": "Drei Skills, die unausgesprochene Annahmen sichtbar machen, bevor sie die Arbeit entgleisen lassen — frag-nach, schritt-fuer-schritt und von-vorne. Deutschsprachige Ausgabe, läuft nativ in Claude und ChatGPT.",
+      "category": "productivity",
+      "keywords": [
+        "agent-skills",
+        "skills",
+        "claude",
+        "chatgpt",
+        "deutsch",
+        "german",
+        "produktivitaet",
+        "workflow",
+        "abstimmen",
+        "schritt-fuer-schritt"
+      ]
+    }
+  ]
+}

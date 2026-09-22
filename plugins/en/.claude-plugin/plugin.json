@@ -1,0 +1,22 @@
+{
+  "name": "leonclaus-skills",
+  "version": "0.3.0",
+  "description": "Three skills that surface unstated assumptions before they derail the work — ask-me, step-by-step and fresh-start. Runs natively in Claude and ChatGPT.",
+  "author": {
+    "name": "Leon Claus",
+    "url": "https://leonclaus.com"
+  },
+  "homepage": "https://leonclaus.com",
+  "repository": "https://github.com/leonclaus/chat-skills",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "skills",
+    "claude",
+    "chatgpt",
+    "productivity",
+    "workflow",
+    "clarify",
+    "step-by-step"
+  ]
+}

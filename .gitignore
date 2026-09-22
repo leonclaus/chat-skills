@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# Editors
+.idea/
+*.swp
+
+# Node (if tooling is ever added)
+node_modules/
+npm-debug.log*
+
+# Local Claude Code settings — never publish
+.claude/settings.local.json
