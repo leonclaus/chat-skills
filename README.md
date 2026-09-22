@@ -16,22 +16,20 @@ visible steps, and start clean when the context is spent. They run natively in
 Two plugins ship the same three skills, one per language. Install **one** of
 them — the English edition or the German one.
 
-| What it does                                         | How it fires | English         | Deutsch                 |
-| ---------------------------------------------------- | ------------ | --------------- | ----------------------- |
-| Agrees on goal and scope before any work starts      | ⚡ Automatic  | `/ask-me`       | `/frag-nach`            |
-| Breaks big work into visible, reviewed steps         | ⚡ Automatic  | `/step-by-step` | `/schritt-fuer-schritt` |
-| Condenses a spent chat into one clean restart prompt | 🖐 On request | `/fresh-start`  | `/von-vorne`            |
+| English         | Deutsch                 | How it fires | What it does                                         |
+| --------------- | ----------------------- | ------------ | ---------------------------------------------------- |
+| `/ask-me`       | `/frag-nach`            | ⚡ Automatic  | Agrees on goal and scope before any work starts      |
+| `/step-by-step` | `/schritt-fuer-schritt` | ⚡ Automatic  | Breaks big work into visible, reviewed steps         |
+| `/fresh-start`  | `/von-vorne`            | 🖐 On request | Condenses a spent chat into one clean restart prompt |
 
-⚡ means you never type the command. The skill fires on an ordinary request —
-a vague one, or a large one — so nobody has to learn a syntax to benefit from it.
+⚡ means you don't have to type the command. Plenty of people do — it's the
+fastest way to reach for one deliberately — but the skill also fires on an
+ordinary request that is vague or large. So you and your team get the benefit
+without anyone having to learn a syntax first.
 
 🖐 is deliberate. `fresh-start` throws away your conversation and hands you a
 condensed prompt to begin again; an assistant deciding on its own that your chat
 is spent would be a bug, not a feature. You ask for that one.
-
-The German edition is a full localization, not a translated wrapper: the
-descriptions carry German trigger phrases, so the skills fire on German prompts,
-and the commands read natively (`/frag-nach`).
 
 ## Why these exist
 
@@ -39,16 +37,37 @@ Most complaints about AI output are really complaints about alignment.
 
 **The assumption gap.** A request carries assumptions nobody said out loud —
 sometimes the user's, sometimes the model's, and often ones the user hasn't
-worked out yet and has no answer to either. One prompt in, a wall of output back,
-and the mismatch only becomes visible once the work is already wrong. `ask-me`
-turns that into a short exchange up front: research whatever is findable, then
-ask only what the user actually owns — goals, priorities, trade-offs.
+worked out yet and has no answer to either.
+
+> Help me create the briefing for a slide deck for a BFCM marketing campaign
+
+Reasonable prompt. It also leaves every load-bearing decision unstated: who the
+briefing is _for_ (an agency, a designer, leadership sign-off), whether the offer
+and discount structure are already settled or part of what's being briefed, which
+channels are in scope, which products and segments, what last year's numbers
+were, and whether there's a campaign framework to follow. The model will quietly
+answer all of that and return a plausible, generic briefing that fits nobody's
+actual situation. Worse, some of those questions the user hasn't decided yet —
+so the output looks like an answer to a question never asked.
+
+`ask-me` turns that into a short exchange up front: research whatever is
+findable, then ask only what the user actually owns — goals, priorities,
+trade-offs.
 
 **Big work dumped in whole.** People hand over a project and expect it finished
-in two messages. The complexity doesn't disappear because it went unmentioned;
-it just becomes invisible, and shows up later as rework. `step-by-step`
-decomposes the task and keeps the plan on screen, so the process is something
-you can see and correct rather than something you hope went well.
+in two messages.
+
+> Create slides for a BFCM marketing campaign
+
+Between that sentence and a deck worth presenting sit a dozen steps: pin down
+the audience and what the deck has to achieve, settle the offer and the channel
+mix, pull last year's results as a baseline, agree the narrative arc, outline it
+slide by slide, write each slide, then review and lay it out. Skipping straight
+to finished slides doesn't remove that work — it just hides it, and it resurfaces
+as rework once someone reads the deck properly.
+
+`step-by-step` decomposes the task and keeps the plan on screen, so the process
+is something you can see and correct rather than something you hope went well.
 
 **Spent context.** Long chats accumulate dead ends, corrections and superseded
 decisions, and the model keeps reading all of it. `fresh-start` filters a
